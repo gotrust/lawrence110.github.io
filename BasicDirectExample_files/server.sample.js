@@ -229,7 +229,8 @@ let session = {};
 
 /* GetAssertion section */
     let getGetAssertionChallenge = () => {
-        session.challenge = base64url.encode(generateRandomBuffer(32));
+        /*session.challenge = base64url.encode(generateRandomBuffer(32)); */
+        session.challenge = base64url.encode(generateRandomBuffer(128));
 
         var publicKey = {
             'challenge': session.challenge,
